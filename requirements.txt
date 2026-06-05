@@ -15,3 +15,15 @@ z3-solver
 fastapi
 uvicorn
 python-multipart
+
+# Pustaka untuk OCR (seperti yang terlihat sedang diunduh di terminal)
+easyocr
+torch
+torchvision
+
+# Pustaka untuk environment variables
+python-dotenv
+
+# Pustaka pendukung lainnya
+jinja2
+requests

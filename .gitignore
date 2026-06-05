@@ -6,4 +6,4 @@ __pycache__/
 .DS_Store
 Thumbs.db
 static/exports/
-web/templates/index.html
+src/web/templates/index.html

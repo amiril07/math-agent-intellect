@@ -1,0 +1,17 @@
+# Core Agent & LLM
+langgraph
+langchain-core
+langchain-openai
+pydantic
+
+# Math Computation & Graphics
+sympy
+numpy
+scipy
+matplotlib
+z3-solver
+
+# Web Server Backend
+fastapi
+uvicorn
+python-multipart

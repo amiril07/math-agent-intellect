@@ -7,3 +7,4 @@ __pycache__/
 Thumbs.db
 static/exports/
 src/web/templates/index.html
+src/agent/prompts.py

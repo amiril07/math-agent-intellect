@@ -1,16 +1,9 @@
-# --- Lingkungan & Konfigurasi ---
 .env
-
-# --- File Python (Bytecode) ---
 __pycache__/
 *.py[cod]
 *$py.class
-
-# --- File Sistem & Editor ---
 .vscode/
 .DS_Store
 Thumbs.db
-
-# --- Folder Output & Data ---
-# Abaikan folder tempat grafik atau file temporary disimpan
 static/exports/
+web/templates/index.html

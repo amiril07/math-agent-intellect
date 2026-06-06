@@ -1,23 +1,43 @@
 # Math Agent Intellect
 
-Math Agent Intellect is an autonomous AI agent platform designed to solve advanced mathematical problems through step-by-step reasoning. By combining visual processing (OCR), symbolic computing, and agent logic, the system provides solutions that are not only accurate but also academically understandable.
+**Math Agent Intellect** is an autonomous AI agent platform designed to solve advanced mathematical problems through step-by-step reasoning. By combining visual processing (OCR), symbolic computation, and agentic logic, this system provides solutions that are not only accurate but also academically rigorous.
 
 ---
 
 ## 📌 Introduction
-Solving complex mathematical problems automatically requires more than just a Large Language Model (LLM); it requires the ability to compute precisely and verify logical steps. This project provides an end-to-end implementation that combines linguistic intelligence with a symbolic computation engine to ensure the mathematical correctness of every answer.
+Solving complex mathematical problems automatically requires more than just a *Large Language Model* (LLM); it requires the ability to compute with precision and verify logical steps. This project provides an end-to-end implementation that bridges linguistic intelligence with symbolic computation engines to ensure mathematical validity in every generated response.
+
 ---
 
 ## 🧠 Model Architecture & Mechanism
 
-Proyek ini tidak mengandalkan tebakan LLM murni, melainkan menerapkan alur kerja Agentic Workflow di mana model bahasa bertindak sebagai pengatur (orchestrator) yang memanggil alat bantu (tools) khusus untuk tugas tertentu.Alur pemrosesan data mengikuti struktur sebagai berikut:1. Vision & PreprocessingInput: Gambar soal matematika yang diunggah pengguna.OCR Engine: Menggunakan EasyOCR untuk melakukan pengenalan karakter optik, mengubah piksel menjadi teks matematis yang dapat diproses:$$\text{Image} \to \text{Text} \to \text{LaTeX Parse}$$2. Intelligent Reasoning EngineLogic Planner: LangGraph mengelola state percakapan dan menentukan apakah soal memerlukan penyelesaian simbolik atau cukup dengan penalaran logis.Symbolic Solver: Saat perhitungan diperlukan, agen mengeksekusi kode Python secara aman di sandbox menggunakan SymPy:$$\int f(x) dx \xrightarrow{\text{SymPy}} \text{Symbolic Result}$$Constraint Solver: Untuk masalah logika atau sistem persamaan yang kompleks, agen menggunakan Z3-solver untuk mencari solusi yang memenuhi kendala yang diberikan.3. Output FormattingStructured Response: Agen menyusun langkah penyelesaian yang koheren.LaTeX Rendering: Semua simbol dan persamaan diformat agar dirender dengan cantik di browser menggunakan MathJax:$$f(x) = \sum_{n=1}^{\infty} \frac{x^n}{n^2} \implies \text{Professional Math Formatting}$$
+This project does not rely purely on LLM "guessing." Instead, it implements an **Agentic Workflow** where the language model acts as an *orchestrator* that calls specialized tools for specific tasks.
+
+The data processing flow follows this structured architecture:
+
+### 1. Vision & Preprocessing
+* **Input**: Mathematical problem images uploaded by the user.
+* **OCR Engine**: Uses **EasyOCR** for optical character recognition, converting pixels into machine-readable mathematical text:
+  $$\text{Image} \to \text{Text} \to \text{LaTeX Parse}$$
+
+### 2. Intelligent Reasoning Engine
+* **Logic Planner**: **LangGraph** manages conversation state and determines if a problem requires symbolic resolution or logical reasoning.
+* **Symbolic Solver**: When calculation is required, the agent executes Python code safely in a sandbox using **SymPy**:
+  $$\int f(x) dx \xrightarrow{\text{SymPy}} \text{Symbolic Result}$$
+* **Constraint Solver**: For complex logic or systems of equations, the agent utilizes **Z3-solver** to find solutions that satisfy specific constraints.
+
+### 3. Output Formatting
+* **Structured Response**: The agent compiles a coherent, step-by-step explanation.
+* **LaTeX Rendering**: All symbols and equations are formatted to be rendered beautifully in the browser using **MathJax**:
+  $$f(x) = \sum_{n=1}^{\infty} \frac{x^n}{n^2} \implies \text{Professional Math Formatting}$$
+
 ---
 
 ## 🛠️ Tech Stack & Dependencies
 * **Core AI Framework:** LangGraph, LangChain, Groq API (LLM)
 * **Web Framework:** FastAPI (Python backend)
-* **Math Engines:** SymPy (Simbolik), Z3-solver (Logika), NumPy/SciPy (Numerik)
+* **Math Engines:** SymPy (Symbolic), Z3-solver (Logic), NumPy/SciPy (Numerical)
 * **Computer Vision:** EasyOCR, PyTorch
-* **Frontend:** HTML5, Tailwind CSS, MathJax
+* **Frontend:** HTML5, MathJax (for equation rendering)
 
 ---
